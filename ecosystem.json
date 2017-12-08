@@ -21,7 +21,7 @@
       "repo": "git@github.com:shenglongli/education-fe-manager.git",
       "path": "/root/education-fe-manager",
       "ssh_options": "StrictHostKeyChecking=no",
-      "post-deploy": "npm install && npm run build && mv -f build /root/education/current/public/manager",
+      "post-deploy": "npm install && npm run build && rm -rf /root/education/current/public/manager && mv build /root/education/current/public/manager",
       "pre-deploy-local": "",
       "env": {
         "NODE_ENV": "production"
