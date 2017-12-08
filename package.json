@@ -45,7 +45,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "init": "pm2 deploy ecosystem.json production setup",
+    "publish": "pm2 deploy ecosystem.json production"
   },
   "jest": {
     "collectCoverageFrom": [

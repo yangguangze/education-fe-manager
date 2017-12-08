@@ -1,0 +1,31 @@
+{
+  "apps": [
+    {
+      "name": "education-fe-manager",
+      "script": "scripts/start.js",
+      "env": {
+        "COMMON_VIRABLE": true
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": [
+        "47.95.113.63"
+      ],
+      "ref": "origin/master",
+      "repo": "git@github.com:shenglongli/education-fe-manager.git",
+      "path": "/root/education-fe-manager",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "post-deploy": "npm install",
+      "pre-deploy-local": "",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
