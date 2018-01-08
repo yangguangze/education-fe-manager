@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import 'antd/dist/antd.css';
+import PCHeader from './js/components/header';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-//registerServiceWorker();
+export default class Root extends Component {
+    render() {
+        return (
+            <div>
+                <PCHeader />
+            </div>
+
+        );
+    }
+}
+
+
+ReactDOM.render(<Root />, document.getElementById('root'));
+
